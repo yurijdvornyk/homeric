@@ -1,0 +1,7 @@
+D:\Programs\Homeric_MathParser\Homeric\HomericConsoleTest\bin\Debug\HomericConsoleTest.exe
+D:\Programs\Homeric_MathParser\Homeric\HomericConsoleTest\bin\Debug\HomericConsoleTest.pdb
+D:\Programs\Homeric_MathParser\Homeric\HomericConsoleTest\bin\Debug\HomericLibrary.dll
+D:\Programs\Homeric_MathParser\Homeric\HomericConsoleTest\bin\Debug\HomericLibrary.pdb
+D:\Programs\Homeric_MathParser\Homeric\HomericConsoleTest\obj\Debug\HomericConsoleTest.csprojResolveAssemblyReference.cache
+D:\Programs\Homeric_MathParser\Homeric\HomericConsoleTest\obj\Debug\HomericConsoleTest.exe
+D:\Programs\Homeric_MathParser\Homeric\HomericConsoleTest\obj\Debug\HomericConsoleTest.pdb
