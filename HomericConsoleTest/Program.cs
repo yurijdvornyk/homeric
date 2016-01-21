@@ -93,6 +93,7 @@ namespace HomericConsoleTest
                         {
                             try
                             {
+                                lineArr[i] = lineArr[i].Replace(',', '.');
                                 values.Add(double.Parse(lineArr[i]));
                             }
                             catch
