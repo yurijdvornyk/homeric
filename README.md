@@ -1,5 +1,5 @@
 # Homeric
-Mathematical expression compiler for .NET
+Mathematical expression compiler for .NET (written in C#).
 
 ### What is it?
 This is a simple open-source library that helps to parse and calculate mathematical expressions. For example:
@@ -89,3 +89,33 @@ values.Add("x", Math.PI);
 Console.WriteLine(expr2.Calculate(values));
 ```
 -- this notation will give the same results as in the previous example.
+
+#### Built-in operators, constants and functions
+
+###### Operators
+
+| Operator | Action | Example |
+| --- | --- | --- |
+| `+` | Add | `2 + 8 = 10` |
+| `-` | Subtract | `47 - 7 = 40` |
+| `*` | Multiplicate | `7 * 4 = 28` |
+| `/` | Divide | `28 / 2 = 14` |
+| `^` | Power | `3 ^ 4 = 81` |
+| `%` | Remainder of the division | `8 % 7 = 1` |
+
+###### Constants
+
+| Constant | Value | Details |
+| --- | --- | --- |
+| `E` | `2.71828182846...` | [`wiki`] (https://en.wikipedia.org/wiki/E_(mathematical_constant)) |
+| `PI` | `3.14159265359...` | [`wiki`] (https://en.wikipedia.org/wiki/Pi) |
+
+###### Functions
+
+Almost all functions from Homeric library perform equivalent actions as functions with the same names in .NET `Math` class.
+You can use:
+`Abs`, `Acos`, `Actan`, `Asin`, `Atan`, `Ceiling`, `Cos`, `Cosh`, `Ctan`, `Ctanh`, `Floor`, `Lg`, `Ln`, `Sign`, `Sin`, `Sinh`, `Sqrt`, `Tan`, `Tanh`. More info about .NET `Math` you can find in [msdn] (https://msdn.microsoft.com/en-us/library/system.math(v=vs.110).aspx).
+
+Also, you can use `Fact` function to get the factorial for some positive integer number (e.g. `5! = Fact(5) = 5 * 4 * 3 * 2 * 1 = 120`).
+
+#### FAQ
