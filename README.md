@@ -90,6 +90,10 @@ Console.WriteLine(expr2.Calculate(values));
 ```
 -- this notation will give the same results as in the previous example.
 
+> Note that among wrong argument order you may have other errors while calculating the expression 
+(devision by 0, trying to evaluate function value out of its definition area, 
+e.g. `Sqrt(-1)`, `Ln(0)` etc.). So, don't forget to handle them properly!
+
 #### Built-in operators, constants and functions
 
 ###### Operators
@@ -123,5 +127,3 @@ Also, you can use `Fact` function to get the factorial of some positive integer 
 - **Q.** Is Homeric case-sensitive?
 
    **A.** No. `Sin(x)`, `sin(X)` and even `sIn(X)` will be equally interpreted as `sin(x)`.
-
-![picture alt](http://quib.ly/media/admin_upload/Homer_simpsonwoohooo.gif)
