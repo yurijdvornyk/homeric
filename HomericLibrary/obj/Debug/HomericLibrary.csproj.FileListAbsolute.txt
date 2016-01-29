@@ -1,4 +1,0 @@
-D:\Programs\Homeric_MathParser\Homeric\HomericLibrary\bin\Debug\HomericLibrary.dll
-D:\Programs\Homeric_MathParser\Homeric\HomericLibrary\bin\Debug\HomericLibrary.pdb
-D:\Programs\Homeric_MathParser\Homeric\HomericLibrary\obj\Debug\HomericLibrary.dll
-D:\Programs\Homeric_MathParser\Homeric\HomericLibrary\obj\Debug\HomericLibrary.pdb
