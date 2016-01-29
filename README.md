@@ -17,7 +17,7 @@ This is a simple open-source library that helps to parse and calculate mathemati
 ### How to use it
 
 #### Get library
-To start using HomericLibrary simple download dll file from [here] (homeric/HomericLibrary/Download/HomericLibrary.dll).
+To start using HomericLibrary simple download dll file from [here] (HomericLibrary/Download/HomericLibrary.dll).
 Although I try to watch this file to be up-to-date regularly, it might not be updated. If you see that its version is a bit old, you can create it by yourself. In this case you need
 to clone this repository, export this project to Visual Studio and build it.
 
