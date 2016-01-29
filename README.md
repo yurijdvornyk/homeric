@@ -116,6 +116,10 @@ Almost all functions from Homeric library perform equivalent actions as function
 You can use:
 `Abs`, `Acos`, `Actan`, `Asin`, `Atan`, `Ceiling`, `Cos`, `Cosh`, `Ctan`, `Ctanh`, `Floor`, `Lg`, `Ln`, `Sign`, `Sin`, `Sinh`, `Sqrt`, `Tan`, `Tanh`. More info about .NET `Math` you can find in [msdn] (https://msdn.microsoft.com/en-us/library/system.math(v=vs.110).aspx).
 
-Also, you can use `Fact` function to get the factorial for some positive integer number (e.g. `5! = Fact(5) = 5 * 4 * 3 * 2 * 1 = 120`).
+Also, you can use `Fact` function to get the factorial of some positive integer number (e.g. `5! = Fact(5) = 5 * 4 * 3 * 2 * 1 = 120`).
 
 #### FAQ
+
+- **Q.** Is Homeric case-sensitive?
+
+   **A.** No. `Sin(x)`, `sin(X)` and even `sIn(X)` will be equally interpreted as `sin(x)`.
