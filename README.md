@@ -123,3 +123,5 @@ Also, you can use `Fact` function to get the factorial of some positive integer 
 - **Q.** Is Homeric case-sensitive?
 
    **A.** No. `Sin(x)`, `sin(X)` and even `sIn(X)` will be equally interpreted as `sin(x)`.
+
+![picture alt](http://quib.ly/media/admin_upload/Homer_simpsonwoohooo.gif)
