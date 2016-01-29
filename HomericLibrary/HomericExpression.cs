@@ -79,8 +79,6 @@ namespace HomericLibrary
 
         #region Constructors
 
-        public HomericExpression() { }
-
         public HomericExpression(string expression) : this(expression, new String[] { }) { }
 
         public HomericExpression(string expression, params string[] vars)
