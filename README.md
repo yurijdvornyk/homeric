@@ -127,3 +127,16 @@ Also, you can use `Fact` function to get the factorial of some positive integer 
 - **Q.** Is Homeric case-sensitive?
 
    **A.** No. `Sin(x)`, `sin(X)` and even `sIn(X)` will be equally interpreted as `sin(x)`.
+
+- **Q.** And what about brackets? How do I should write them?
+
+   **A.** You can write brackets in the same way that you write them in any mathematical expression or code. For example, 
+`(2 + 2) * 2` will return `8`. So, if you want to make some part of expression be calculated before another one and if its priority is lower, simply wrap it with brackets.
+
+- **Q.** In the examples in this tutorial you write lot of spaces in expressions, just like it is in C# code convension. Is it necessarily to write all of them?
+
+   **A.** No, this is not necessary. But it's a good practice to use it in complex expressions, where you need to have good readability. When the expression is being processing, all the spaces are removed. For example, `Sin(x + 2) - 5 * Sqr(y)`, `Sin(x+2   )-5*Sqr  (   y )` will both be interpreted as `sin(x+2)-5*sqr(y)`.
+
+- **Q.** I've cloned this repository and now I see two projects. One of them is class library and another -- console application. What is it?
+
+   **A.** Console project is a simple app for easy practical testing the library. In the future I plan to add unit tests for it, but now this is a good way to test Homeric library in action. To start testing it, run the console project and type `info` in command line. You will see the list of commands and instructions, how to use them.
