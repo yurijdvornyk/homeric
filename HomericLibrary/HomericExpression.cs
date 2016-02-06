@@ -327,7 +327,6 @@ namespace HomericLibrary
         public double Calculate()
         {
             Stack<Token> stack = new Stack<Token>();
-
             foreach (Token t in reversePolishTokens)
             {
                 if (t is Number)
@@ -338,36 +337,36 @@ namespace HomericLibrary
 
                 if (t is Operator)
                 {
-                    string operand1Str = stack.Pop().Lexeme.Replace(',', '.');
-                    string operand2Str = stack.Pop().Lexeme.Replace(',', '.');
-                    double operand1 = double.Parse(operand1Str);
-                    double operand2 = double.Parse(operand2Str);
+                    string op1Str = stack.Pop().Lexeme.Replace(",", ".");
+                    string op2Str = stack.Pop().Lexeme.Replace(",", ".");
+                    double operand1 = double.Parse(op1Str, CultureInfo.InvariantCulture);
+                    double operand2 = double.Parse(op2Str, CultureInfo.InvariantCulture);
                     double resultNum = operators[t.Lexeme](operand1, operand2);
-                    Token result = new Number(resultNum.ToString());
+                    Token result = new Number(resultNum.ToString(CultureInfo.InvariantCulture));
                     stack.Push(result);
                     continue;
                 }
 
                 if (t is Function)
                 {
-                    string argumentStr = stack.Pop().Lexeme.Replace(',', '.');
-                    double argumentNum = double.Parse(argumentStr);
+                    string argumentStr = stack.Pop().Lexeme.Replace(",", ".");
+                    double argumentNum = double.Parse(argumentStr, CultureInfo.InvariantCulture);
                     double resultNum = functions[t.Lexeme](argumentNum);
-                    Token result = new Number(resultNum.ToString());
+                    Token result = new Number(resultNum.ToString(CultureInfo.InvariantCulture));
                     stack.Push(result);
                     continue;
                 }
                 if (t is Constant)
                 {
                     double constant = constants.First(c => c.Key == t.Lexeme).Value;
-                    Token result = new Number(constant.ToString());
+                    Token result = new Number(constant.ToString(CultureInfo.InvariantCulture));
                     stack.Push(result);
                     continue;
                 }
                 if (t is Variable)
                 {
                     KeyValuePair<string, double> v = variables.First(n => n.Key == t.Lexeme);
-                    Token result = new Number(v.Value.ToString());
+                    Token result = new Number(v.Value.ToString(CultureInfo.InvariantCulture));
                     stack.Push(result);
                     continue;
                 }
@@ -379,7 +378,7 @@ namespace HomericLibrary
             double totalResult = 0;
             try
             {
-                totalResult = double.Parse(stack.Pop().Lexeme);
+                totalResult = double.Parse(stack.Pop().Lexeme, CultureInfo.InvariantCulture);
             }
             catch (Exception ex)
             {
