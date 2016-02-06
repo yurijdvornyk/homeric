@@ -340,8 +340,8 @@ namespace HomericLibrary
                 {
                     string operand1Str = stack.Pop().Lexeme.Replace(',', '.');
                     string operand2Str = stack.Pop().Lexeme.Replace(',', '.');
-                    double operand1 = double.Parse(operand1Str, CultureInfo.InvariantCulture);
-                    double operand2 = double.Parse(operand2Str, CultureInfo.InvariantCulture);
+                    double operand1 = double.Parse(operand1Str);
+                    double operand2 = double.Parse(operand2Str);
                     double resultNum = operators[t.Lexeme](operand1, operand2);
                     Token result = new Number(resultNum.ToString());
                     stack.Push(result);
@@ -351,7 +351,7 @@ namespace HomericLibrary
                 if (t is Function)
                 {
                     string argumentStr = stack.Pop().Lexeme.Replace(',', '.');
-                    double argumentNum = double.Parse(argumentStr, CultureInfo.InvariantCulture);
+                    double argumentNum = double.Parse(argumentStr);
                     double resultNum = functions[t.Lexeme](argumentNum);
                     Token result = new Number(resultNum.ToString());
                     stack.Push(result);
@@ -379,7 +379,7 @@ namespace HomericLibrary
             double totalResult = 0;
             try
             {
-                totalResult = double.Parse(stack.Pop().Lexeme, CultureInfo.InvariantCulture);
+                totalResult = double.Parse(stack.Pop().Lexeme);
             }
             catch (Exception ex)
             {
@@ -397,7 +397,7 @@ namespace HomericLibrary
         public double Calculate(params double[] values)
         {
             updateVariables(values);
-            return Calculate();            
+            return Calculate();
         }
 
         /// <summary>
@@ -413,10 +413,16 @@ namespace HomericLibrary
 
         private void updateVariables(double[] values)
         {
-            for (int i = 0; i < values.Length; ++i)
+            if (variables.Keys != null)
             {
-                var key = variables.Keys.ToArray()[i];
-                variables[key] = values[i];
+                if (variables.Keys.Count == values.Length)
+                {
+                    for (int i = 0; i < values.Length; ++i)
+                    {
+                        var key = variables.Keys.ToArray()[i];
+                        variables[key] = values[i];
+                    }
+                }
             }
         }
 
