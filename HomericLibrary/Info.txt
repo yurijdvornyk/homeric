@@ -1,1 +1,0 @@
-hoMERIC	  Mathematical ExpRessIon Compiler
